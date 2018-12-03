@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Mastermind Simulator</string>
+    <string name="nameInputText">Enter Your Name Here</string>
+    <string name="enterButton">Submit</string>
+    <string name="welcomeMessage">Welcome to Virtual Mastermind!</string>
+    <string name="rules1">
+        This is a Board game created by Mordecai Meirowitz.
+        There are 2 players, the Codemaker and the Codebreaker.
+        The goal of the Codemaker is create a secret code of 4 pegs with 6 colors to choose from.
+        The 6 colors are Red, Blue, Green, Orange, White, and Yellow.
+        For example, the Codemaker can have his/her secret be Red, Blue, Green, Green.
+        ------------------------------------------------------------------------------
+    </string>
+    <string name="rules2">
+        You are playing as the Codebreaker.
+
+        And it is your goal to guess the opponents secret code as quickly as possible.
+        After you guess the secret code, the Codemaker will tell you how close your guess was to the answer.
+        For this game, you put 4 letters that correspond to the colors you put in!
+        G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.
+        When you put in your answer, the computer will respond with either Black (for B), White (for W), or a Blank Space
+        A Black means the color you guessed is in the right spot.
+        A white means the color you guessed is in the code, but in the wrong place.
+        A blank means it\'s not in the code.
+        Have fun!
+    </string>
+</resources>
