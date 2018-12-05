@@ -4,24 +4,24 @@
     <string name="enterButton">Submit</string>
     <string name="welcomeMessage">Welcome to Virtual Mastermind!</string>
     <string name="rules1">
-        This is a Board game created by Mordecai Meirowitz.
+        Welcome to Mastermind Mobile! This is based on a board game created by Mordecai Meirowitz.
         There are 2 players, the Codemaker and the Codebreaker.
-        The goal of the Codemaker is create a secret code of 4 pegs with 6 colors to choose from.
-        The 6 colors are Red, Blue, Green, Orange, White, and Yellow.
-        For example, the Codemaker can have his/her secret be Red, Blue, Green, Green.
-        ------------------------------------------------------------------------------
+        The Codemaker creates a secret 4 peg color code for the Codebreaker to guess.
+        There are 6 colors to choose: Red, Blue, Green, Orange, White, and Yellow.
+        An example color code could be: Yellow, Red, Blue, Blue.
+
     </string>
     <string name="rules2">
-        You are playing as the Codebreaker.
+        you are playing as the Codebreaker.
 
-        And it is your goal to guess the opponents secret code as quickly as possible.
-        After you guess the secret code, the Codemaker will tell you how close your guess was to the answer.
-        For this game, you put 4 letters that correspond to the colors you put in!
+        It is your goal to guess the opponent\'s secret code in the least amount of guesses.
+        After each guess, the Codemaker will provide helpful feedback in the form of black and white pegs.
+        Black pegs indicate that a peg is the correct color and in the correct place in the sequence.
+        White pegs indicate that a correct color is in the wrong place.
+        No pegs means the color is not in the sequence.
+        For this game, you will enter 4 letters that correspond to the colors!
         G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.
-        When you put in your answer, the computer will respond with either Black (for B), White (for W), or a Blank Space
-        A Black means the color you guessed is in the right spot.
-        A white means the color you guessed is in the code, but in the wrong place.
-        A blank means it\'s not in the code.
-        Have fun!
+        Good luck and have fun!
     </string>
+    <string name="Continue">Continue</string>
 </resources>

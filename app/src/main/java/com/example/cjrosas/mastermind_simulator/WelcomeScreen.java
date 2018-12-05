@@ -1,5 +1,6 @@
 package com.example.cjrosas.mastermind_simulator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,15 +12,21 @@ public class WelcomeScreen extends AppCompatActivity {
 
     String name;
 
-    EditText nameInput = (EditText) findViewById(R.id.nameInput);
+    EditText nameInput;
 
-    Button btn = (Button) findViewById(R.id.continueButton);
+    Button btn;
+
+    Button goOn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
+        nameInput = (EditText) findViewById(R.id.nameInput);
+        btn = (Button) findViewById(R.id.submitButton);
+        goOn = (Button) findViewById(R.id.continueButton);
+        goOn.setVisibility(View.GONE);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +35,14 @@ public class WelcomeScreen extends AppCompatActivity {
                 String rules1 = getString(R.string.rules1);
                 String rules2 = getString(R.string.rules2);
                 TextView welcomeMessage = findViewById(R.id.welcomeMessage);
-                welcomeMessage.setText(rules1 + name + rules2);
+                welcomeMessage.setText(rules1 + " " + name + ", " + rules2);
+                goOn.setVisibility(View.VISIBLE);
+            }
+        });
+        goOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeScreen.this, GameView.class));
             }
         });
     }
