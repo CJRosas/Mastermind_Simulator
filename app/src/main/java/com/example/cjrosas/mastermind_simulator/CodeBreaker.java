@@ -19,7 +19,7 @@ public class CodeBreaker {
     public CodeBreaker(String p) {
         player = p;
         Random obj = new Random();
-        showGame();
+        //showGame();
         secretC = allCombinations.get(obj.nextInt(allCombinations.size()));
         for (int i = 0; i < secretC.length(); i++) {
             secretCode[i] = secretC.substring(i, i + 1);
@@ -27,62 +27,62 @@ public class CodeBreaker {
         getGuess();
     }
 
-    public static void showGame() {
-        System.out.println("---");
-        System.out.println("Welcome to Mastermind, " + player + "!");
-        System.out.println("---");
-        letters[0] = "R";
-        letters[1] = "G";
-        letters[2] = "U";
-        letters[3] = "O";
-        letters[4] = "Y";
-        letters[5] = "W";
-        getAllCombinations();
-        showAllRules();
-    }
-
-    public static void showAllRules() {
-        System.out.println("Displaying Rules to the Game Mastermind:");
-        showGameRules();
-        showPlayerRules();
-    }
-
-    public static void showGameRules() {
-        System.out.println("---");
-        System.out.println("This is a Board game created by Mordecai Meirowitz.");
-        System.out.println("---");
-        System.out.println("There are 2 players, the Codemaker and the Codebreaker.");
-        System.out.println("---");
-        System.out.println("The goal of the Codemaker is create a secret code of 4 pegs with 6 colors to choose from.");
-        System.out.println("---");
-        System.out.println("The 6 colors are Red, Blue, Green, Orange, White, and Yellow.");
-        System.out.println("---");
-        System.out.println("For example, the Codemaker can have his/her secret be Red, Blue, Green, Green.");
-        System.out.println("---");
-    }
-
-    public static void showPlayerRules() {
-        System.out.println(player + ", you are playing as the Codebreaker.");
-        System.out.println("---");
-        System.out.println("And it is your goal to guess the opponents secret code as quickly as possible.");
-        System.out.println("---");
-        System.out.println("After you guess the secret code, the Codemaker will tell you how close your guess was to the answer.");
-        System.out.println("---");
-        System.out.println("For this game, you put 4 letters that correspond to the colors you put in!");
-        System.out.println("---");
-        System.out.println("G is for " + G + ", R is for " + R + ", U is for "+ U + ", Y is for " + Y + ", W is for " +
-                W + ", and O is for " + O + ".");
-        System.out.println("---");
-        System.out.println("When you put in your answer, the computer will respond with either Black (for B), White (for W), or a Blank Space");
-        System.out.println("---");
-        System.out.println("A Black means the color you guessed is in the right spot.");
-        System.out.println("---");
-        System.out.println("A white means the color you guessed is in the code, but in the wrong place.");
-        System.out.println("---");
-        System.out.println("A blank means it's not in the code.");
-        System.out.println("---");
-        System.out.println("Have fun!");
-    }
+//    public static void showGame() {
+//        System.out.println("---");
+//        System.out.println("Welcome to Mastermind, " + player + "!");
+//        System.out.println("---");
+//        letters[0] = "R";
+//        letters[1] = "G";
+//        letters[2] = "U";
+//        letters[3] = "O";
+//        letters[4] = "Y";
+//        letters[5] = "W";
+//        getAllCombinations();
+//        showAllRules();
+//    }
+//
+//    public static void showAllRules() {
+//        System.out.println("Displaying Rules to the Game Mastermind:");
+//        showGameRules();
+//        showPlayerRules();
+//    }
+//
+//    public static void showGameRules() {
+//        System.out.println("---");
+//        System.out.println("This is a Board game created by Mordecai Meirowitz.");
+//        System.out.println("---");
+//        System.out.println("There are 2 players, the Codemaker and the Codebreaker.");
+//        System.out.println("---");
+//        System.out.println("The goal of the Codemaker is create a secret code of 4 pegs with 6 colors to choose from.");
+//        System.out.println("---");
+//        System.out.println("The 6 colors are Red, Blue, Green, Orange, White, and Yellow.");
+//        System.out.println("---");
+//        System.out.println("For example, the Codemaker can have his/her secret be Red, Blue, Green, Green.");
+//        System.out.println("---");
+//    }
+//
+//    public static void showPlayerRules() {
+//        System.out.println(player + ", you are playing as the Codebreaker.");
+//        System.out.println("---");
+//        System.out.println("And it is your goal to guess the opponents secret code as quickly as possible.");
+//        System.out.println("---");
+//        System.out.println("After you guess the secret code, the Codemaker will tell you how close your guess was to the answer.");
+//        System.out.println("---");
+//        System.out.println("For this game, you put 4 letters that correspond to the colors you put in!");
+//        System.out.println("---");
+//        System.out.println("G is for " + G + ", R is for " + R + ", U is for "+ U + ", Y is for " + Y + ", W is for " +
+//                W + ", and O is for " + O + ".");
+//        System.out.println("---");
+//        System.out.println("When you put in your answer, the computer will respond with either Black (for B), White (for W), or a Blank Space");
+//        System.out.println("---");
+//        System.out.println("A Black means the color you guessed is in the right spot.");
+//        System.out.println("---");
+//        System.out.println("A white means the color you guessed is in the code, but in the wrong place.");
+//        System.out.println("---");
+//        System.out.println("A blank means it's not in the code.");
+//        System.out.println("---");
+//        System.out.println("Have fun!");
+//    }
 
     public static void getGuess() {
         if (numOfTurns == 0) {
