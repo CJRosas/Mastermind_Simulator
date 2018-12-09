@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import static com.example.cjrosas.mastermind_simulator.CodeBreaker.checkCorrect;
-import static com.example.cjrosas.mastermind_simulator.CodeBreaker.getAllCombinations;
+
 
 public class GameView extends AppCompatActivity {
 
@@ -45,7 +45,6 @@ public class GameView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_view);
-        getAllCombinations();
 
         //Initialization of each item
         submitButton = (Button) findViewById(R.id.submitButton);

@@ -25,6 +25,7 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
         nameInput = (EditText) findViewById(R.id.nameInput);
+        CodeBreaker player = new CodeBreaker(name);
         btn = (Button) findViewById(R.id.submitButton);
         goOn = (Button) findViewById(R.id.continueButton);
         goOn.setVisibility(View.GONE);
