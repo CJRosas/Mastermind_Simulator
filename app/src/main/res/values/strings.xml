@@ -24,4 +24,5 @@
         Good luck and have fun!
     </string>
     <string name="Continue">Continue</string>
+    <string name="title_activity_game_screen">GameScreen</string>
 </resources>

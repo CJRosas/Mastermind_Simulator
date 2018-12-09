@@ -25,6 +25,7 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
         nameInput = (EditText) findViewById(R.id.nameInput);
+        CodeBreaker player = new CodeBreaker(name);
         btn = (Button) findViewById(R.id.submitButton);
         goOn = (Button) findViewById(R.id.continueButton);
         goOn.setVisibility(View.GONE);
@@ -36,8 +37,13 @@ public class WelcomeScreen extends AppCompatActivity {
                 name = nameInput.getText().toString();
                 String rules1 = getString(R.string.rules1);
                 String rules2 = getString(R.string.rules2);
+
                 TextView welcomeMessage = findViewById(R.id.welcomeMessage);
-                welcomeMessage.setText(rules1 + " " + name + ", " + rules2);
+                String rules = rules1.concat(" ");
+                rules = rules.concat(name);
+                rules = rules.concat(" ");
+                rules = rules.concat(rules2);
+                welcomeMessage.setText(rules);
                 goOn.setVisibility(View.VISIBLE);
             }
         });
