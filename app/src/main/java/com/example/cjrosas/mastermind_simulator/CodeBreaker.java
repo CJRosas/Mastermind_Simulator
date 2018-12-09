@@ -16,30 +16,30 @@ public class CodeBreaker {
     private static String secretC;
     private static String[] secretCode = new String[4];
 
-    public CodeBreaker(String p) {
-        player = p;
+    public CodeBreaker() {
+//        player = p;
         Random obj = new Random();
-        //showGame();
+//        showGame();
         secretC = allCombinations.get(obj.nextInt(allCombinations.size()));
         for (int i = 0; i < secretC.length(); i++) {
             secretCode[i] = secretC.substring(i, i + 1);
         }
-        getGuess();
+//        getGuess();
     }
 
-//    public static void showGame() {
+    public static void showGame() {
 //        System.out.println("---");
 //        System.out.println("Welcome to Mastermind, " + player + "!");
 //        System.out.println("---");
-//        letters[0] = "R";
-//        letters[1] = "G";
-//        letters[2] = "U";
-//        letters[3] = "O";
-//        letters[4] = "Y";
-//        letters[5] = "W";
+        letters[0] = "R";
+        letters[1] = "G";
+        letters[2] = "U";
+        letters[3] = "O";
+        letters[4] = "Y";
+        letters[5] = "W";
 //        getAllCombinations();
 //        showAllRules();
-//    }
+    }
 //
 //    public static void showAllRules() {
 //        System.out.println("Displaying Rules to the Game Mastermind:");
@@ -84,27 +84,28 @@ public class CodeBreaker {
 //        System.out.println("Have fun!");
 //    }
 
-    public static void getGuess() {
+    public static void getGuess(String guess) {
         if (numOfTurns == 0) {
             finishGame();
-        } else {
-            System.out.println("---");
-            System.out.println("What is your guess?");
-            String guess;
-            Scanner getGuess = new Scanner(System.in);
-            guess = getGuess.nextLine();
+        }
+        while (numOfTurns != 0) {
+//            System.out.println("---");
+//            System.out.println("What is your guess?");
+//            String guess;
+//            Scanner getGuess = new Scanner(System.in);
+//            guess = getGuess.nextLine();
             if (allCombinations.contains(guess)) {
-                System.out.println("---");
-                System.out.println(player + " guessed " + guess + ".");
-                System.out.println("---");
+//                System.out.println("---");
+//                System.out.println(player + " guessed " + guess + ".");
+//                System.out.println("---");
                 numOfTurns--;
-                System.out.println("Your turns left: " + numOfTurns + ".");
+//                System.out.println("Your turns left: " + numOfTurns + ".");
                 isCorrect(guess);
-            } else {
-                System.out.println("---");
-                System.out.println("Try again please.");
-                getGuess();
-            }
+            } //else {
+//                System.out.println("---");
+//                System.out.println("Try again please.");
+//                getGuess();
+//            }
         }
     }
     public static void getAllCombinations() {
@@ -122,15 +123,15 @@ public class CodeBreaker {
 
     public static void isCorrect(String guess) {
         if (guess.equals(secretC)) {
-            System.out.println("---");
-            System.out.println("You got it right!");
-            System.out.println("---");
+//            System.out.println("---");
+//            System.out.println("You got it right!");
+//            System.out.println("---");
             winGame();
         } else {
-            System.out.println("Not quite right...");
-            System.out.println("---");
-            System.out.println(checkCorrect(guess));
-            getGuess();
+//            System.out.println("Not quite right...");
+//            System.out.println("---");
+//            System.out.println(checkCorrect(guess));
+            getGuess(guess);
         }
     }
 
