@@ -9,7 +9,7 @@ public class CodeBreaker {
     private static String player;
     private static String secretC;
     private static String[] secretCode = new String[4];
-    private CodeBreaker highScore;
+    private static CodeBreaker highScore;
 
     public CodeBreaker(String p) {
         player = p;
@@ -21,7 +21,7 @@ public class CodeBreaker {
         }
     }
 
-    public String getGuess(String g) {
+    public static String getGuess(String g) {
         if (numOfTurns == 0) {
             return "You lost!";
         } else {
@@ -47,7 +47,7 @@ public class CodeBreaker {
         }
     }
 
-    public String isCorrect(String guess) {
+    public static String isCorrect(String guess) {
         if (guess.equals(secretC)) {
             return winGame();
         } else {
@@ -55,7 +55,7 @@ public class CodeBreaker {
         }
     }
 
-    public String checkCorrect(String g) {
+    public static String checkCorrect(String g) {
         String pegs = "";
         String[] guess = new String[4];
         for (int i = 0; i < g.length(); i++) {
@@ -91,18 +91,18 @@ public class CodeBreaker {
 
     }
 
-    public String winGame() {
-        if (highScore == null) {
-            highScore = this;
-        }
-        int turns = highScore.getNumOfTurns();
-        if (turns > numOfTurns) {
-            highScore = this;
-        }
+    public static String winGame() {
+//        if (highScore == null) {
+//            highScore = this;
+//        }
+//        int turns = highScore.getNumOfTurns();
+//        if (turns > numOfTurns) {
+//            highScore = this;
+//        }
         return player + " won with " + numOfTurns + " turns left!";
     }
 
-    public String getHighPlayersScore() throws NullPointerException {
+    public static String getHighPlayersScore() throws NullPointerException {
         try {
             return Integer.toString(highScore.getNumOfTurns());
         } catch (Exception e) {
@@ -110,7 +110,7 @@ public class CodeBreaker {
         }
     }
 
-    public int getNumOfTurns() {
+    public static int getNumOfTurns() {
         return numOfTurns;
     }
 
@@ -118,4 +118,3 @@ public class CodeBreaker {
         return secretCode;
     }
 }
-
