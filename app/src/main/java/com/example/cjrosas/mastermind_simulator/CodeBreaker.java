@@ -9,7 +9,6 @@ public class CodeBreaker {
     private static String player;
     private static String secretC;
     private static String[] secretCode = new String[4];
-    private List<String> rules = new ArrayList<>();
     private CodeBreaker highScore;
 
     public CodeBreaker(String p) {
@@ -20,29 +19,18 @@ public class CodeBreaker {
         for (int i = 0; i < secretC.length(); i++) {
             secretCode[i] = secretC.substring(i, i + 1);
         }
-        getGuess();
     }
 
-    public void getGuess() {
+    public String getGuess(String g) {
         if (numOfTurns == 0) {
-            finishGame();
+            return "You lost!";
         } else {
-            System.out.println("---");
-            System.out.println("What is your guess?");
-            String guess;
-            Scanner getGuess = new Scanner(System.in);
-            guess = getGuess.nextLine();
+            String guess = g;
             if (allCombinations.contains(guess)) {
-                System.out.println("---");
-                System.out.println(player + " guessed " + guess + ".");
-                System.out.println("---");
                 numOfTurns--;
-                System.out.println("Your turns left: " + numOfTurns + ".");
-                isCorrect(guess);
+                return isCorrect(guess);
             } else {
-                System.out.println("---");
-                System.out.println("Try again please.");
-                getGuess();
+                return "RETRY";
             }
         }
     }
@@ -59,17 +47,11 @@ public class CodeBreaker {
         }
     }
 
-    public void isCorrect(String guess) {
+    public String isCorrect(String guess) {
         if (guess.equals(secretC)) {
-            System.out.println("---");
-            System.out.println("You got it right!");
-            System.out.println("---");
-            winGame();
+            return winGame();
         } else {
-            System.out.println("Not quite right...");
-            System.out.println("---");
-            System.out.println(checkCorrect(guess));
-            getGuess();
+            return checkCorrect(guess);
         }
     }
 
@@ -107,14 +89,6 @@ public class CodeBreaker {
         shuffledString = shuffledString.replaceAll(" ", "");
         return shuffledString;
 
-    }
-
-    public List<String> finishGame() {
-        List<String> answer = new ArrayList<>();
-        answer.add("You lost!");
-        answer.add("---");
-        answer.add("The secret code was: " + secretC);
-        return answer;
     }
 
     public String winGame() {
