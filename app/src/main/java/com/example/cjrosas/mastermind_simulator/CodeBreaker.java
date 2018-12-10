@@ -16,9 +16,10 @@ public class CodeBreaker {
         Random obj = new Random();
         getAllCombinations();
         secretC = allCombinations.get(obj.nextInt(allCombinations.size()));
-        for (int i = 0; i < secretC.length(); i++) {
-            secretCode[i] = secretC.substring(i, i + 1);
-        }
+        secretCode[0] = secretC.substring(0,1);
+        secretCode[1] = secretC.substring(1,2);
+        secretCode[2] = secretC.substring(2,3);
+        secretCode[3] = secretC.substring(3,4);
     }
 
     public static String getGuess(String g) {
