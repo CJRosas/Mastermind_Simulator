@@ -9,44 +9,46 @@ public class CodeBreaker {
     private static String player;
     private static String secretC;
     private static String[] secretCode = new String[4];
-    private List<String> rules = new ArrayList<>();
-    private CodeBreaker highScore;
+    private static CodeBreaker highScore;
 
     public CodeBreaker(String p) {
-        player = p;
+        if (p == null) {
+            player = "Player";
+        } else {
+            player = p;
+        }
         Random obj = new Random();
         getAllCombinations();
         secretC = allCombinations.get(obj.nextInt(allCombinations.size()));
-        for (int i = 0; i < secretC.length(); i++) {
-            secretCode[i] = secretC.substring(i, i + 1);
-        }
-        getGuess();
+//        for (int i = 0; i < secretC.length(); i++) {
+//            secretCode[i] = secretC.substring(i, i + 1);
+//        }
+        secretCode[0] = secretC.substring(0, 1);
+        secretCode[1] = secretC.substring(1, 2);
+        secretCode[2] = secretC.substring(2, 3);
+        secretCode[3] = secretC.substring(3, 4);
     }
 
-    public void getGuess() {
+    public static String getGuess(String g) {
         if (numOfTurns == 0) {
-            finishGame();
+            return "You lost!";
         } else {
-            System.out.println("---");
-            System.out.println("What is your guess?");
-            String guess;
-            Scanner getGuess = new Scanner(System.in);
-            guess = getGuess.nextLine();
+            String guess = g;
             if (allCombinations.contains(guess)) {
-                System.out.println("---");
-                System.out.println(player + " guessed " + guess + ".");
-                System.out.println("---");
                 numOfTurns--;
-                System.out.println("Your turns left: " + numOfTurns + ".");
-                isCorrect(guess);
+                return isCorrect(guess);
             } else {
-                System.out.println("---");
-                System.out.println("Try again please.");
-                getGuess();
+                return "RETRY";
             }
         }
     }
     public void getAllCombinations() {
+        letters[0] = "G";
+        letters[1] = "R";
+        letters[2] = "U";
+        letters[3] = "Y";
+        letters[4] = "W";
+        letters[5] = "O";
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 for (int k = 0; k < 6; k++) {
@@ -59,17 +61,11 @@ public class CodeBreaker {
         }
     }
 
-    public void isCorrect(String guess) {
+    public static String isCorrect(String guess) {
         if (guess.equals(secretC)) {
-            System.out.println("---");
-            System.out.println("You got it right!");
-            System.out.println("---");
-            winGame();
+            return winGame();
         } else {
-            System.out.println("Not quite right...");
-            System.out.println("---");
-            System.out.println(checkCorrect(guess));
-            getGuess();
+            return checkCorrect(guess);
         }
     }
 
@@ -106,28 +102,21 @@ public class CodeBreaker {
 
         shuffledString = shuffledString.replaceAll(" ", "");
         return shuffledString;
+
     }
 
-    public List<String> finishGame() {
-        List<String> answer = new ArrayList<>();
-        answer.add("You lost!");
-        answer.add("---");
-        answer.add("The secret code was: " + secretC);
-        return answer;
-    }
-
-    public String winGame() {
-        if (highScore == null) {
-            highScore = this;
-        }
-        int turns = highScore.getNumOfTurns();
-        if (turns > numOfTurns) {
-            highScore = this;
-        }
+    public static String winGame() {
+//        if (highScore == null) {
+//            highScore = this;
+//        }
+//        int turns = highScore.getNumOfTurns();
+//        if (turns > numOfTurns) {
+//            highScore = this;
+//        }
         return player + " won with " + numOfTurns + " turns left!";
     }
 
-    public String getHighPlayersScore() throws NullPointerException {
+    public static String getHighPlayersScore() throws NullPointerException {
         try {
             return Integer.toString(highScore.getNumOfTurns());
         } catch (Exception e) {
@@ -135,11 +124,11 @@ public class CodeBreaker {
         }
     }
 
-    public int getNumOfTurns() {
+    public static int getNumOfTurns() {
         return numOfTurns;
     }
 
-    public String[] getSecretCode() {
+    public static String[] getSecretCode() {
         return secretCode;
     }
 }
