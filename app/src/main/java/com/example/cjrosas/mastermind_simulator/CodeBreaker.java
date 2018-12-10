@@ -26,16 +26,21 @@ public class CodeBreaker {
         if (numOfTurns == 0) {
             return "You lost!";
         } else {
-            String guess = g;
-            if (allCombinations.contains(guess)) {
+            if (allCombinations.contains(g)) {
                 numOfTurns--;
-                return isCorrect(guess);
+                return isCorrect(g);
             } else {
                 return "RETRY";
             }
         }
     }
     public void getAllCombinations() {
+        letters[0] = "G";
+        letters[1] = "R";
+        letters[2] = "U";
+        letters[3] = "Y";
+        letters[4] = "W";
+        letters[5] = "O";
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 for (int k = 0; k < 6; k++) {
