@@ -1,5 +1,6 @@
 package com.example.cjrosas.mastermind_simulator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -68,13 +69,35 @@ public class GameView extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String turns = getString(R.string.counter);
+//                if (response1.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response1.toString().equals("You lost!")
+//                        || response2.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response2.toString().equals("You lost!")
+//                        || response3.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response3.toString().equals("You lost!")
+//                        || response4.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response4.toString().equals("You lost!")
+//                        || response5.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response5.toString().equals("You lost!")
+//                        || response6.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response6.toString().equals("You lost!")
+//                        || response7.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response7.toString().equals("You lost!")
+//                        || response8.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response8.toString().equals("You lost!")
+//                        || response9.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response9.toString().equals("You lost!")
+//                        || response10.toString().equals(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())))
+//                        || response10.toString().equals("You lost!")) {
+//                    startActivity(new Intent(GameView.this, leaderboard.class));
+//                }
                 if (i == 0) {
                     guess = guess1.getText().toString();
                     TextView response1 = findViewById(R.id.response1);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response1.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -84,9 +107,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess2.getText().toString();
                     TextView response2 = findViewById(R.id.response2);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response2.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -96,9 +118,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess3.getText().toString();
                     TextView response3 = findViewById(R.id.response3);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response3.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -108,9 +129,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess4.getText().toString();
                     TextView response4 = findViewById(R.id.response4);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response4.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -120,9 +140,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess5.getText().toString();
                     TextView response5 = findViewById(R.id.response5);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response5.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -132,9 +151,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess6.getText().toString();
                     TextView response6 = findViewById(R.id.response6);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response6.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -144,9 +162,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess7.getText().toString();
                     TextView response7 = findViewById(R.id.response7);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response7.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -156,9 +173,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess8.getText().toString();
                     TextView response8 = findViewById(R.id.response8);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response8.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -168,9 +184,8 @@ public class GameView extends AppCompatActivity {
                     guess = guess9.getText().toString();
                     TextView response9 = findViewById(R.id.response9);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
                     response9.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
@@ -180,9 +195,9 @@ public class GameView extends AppCompatActivity {
                     guess = guess10.getText().toString();
                     TextView response10 = findViewById(R.id.response10);
                     CharSequence text = CodeBreaker.getGuess(guess);
-                    String turns = getString(R.string.counter);
+
                     response10.setText(text);
-                    turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    turnCounter.setText(turns.concat(Integer.toString(CodeBreaker.getNumOfTurns())));
                 }
             }
         });

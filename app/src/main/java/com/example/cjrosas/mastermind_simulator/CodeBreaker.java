@@ -9,7 +9,7 @@ public class CodeBreaker {
     private static String player;
     private static String secretC;
     private static String[] secretCode = new String[4];
-    private static CodeBreaker highScore;
+    private static int highScore;
 
     public CodeBreaker(String p) {
         if (p == null) {
@@ -107,10 +107,10 @@ public class CodeBreaker {
 
     public static String winGame() {
 //        if (highScore == null) {
-//            highScore = this;
+//            highScore = numOfTurns;
 //        }
-//        int turns = highScore.getNumOfTurns();
-//        if (turns > numOfTurns) {
+//        int turns = this.getNumOfTurns();
+//        if (turns > ) {
 //            highScore = this;
 //        }
         return player + " won with " + numOfTurns + " turns left!";
@@ -118,7 +118,7 @@ public class CodeBreaker {
 
     public static String getHighPlayersScore() throws NullPointerException {
         try {
-            return Integer.toString(highScore.getNumOfTurns());
+            return Integer.toString(getNumOfTurns()) + " turns.";
         } catch (Exception e) {
             return "No one has won yet ;)";
         }
@@ -126,6 +126,10 @@ public class CodeBreaker {
 
     public static int getNumOfTurns() {
         return numOfTurns;
+    }
+
+    public static String getName() {
+        return player;
     }
 
     public static String[] getSecretCode() {

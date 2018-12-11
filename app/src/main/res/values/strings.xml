@@ -27,4 +27,5 @@
     <string name="colorReminder">G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.</string>
     <string name="guessField">Enter 4 Letter Code</string>
     <string name="counter">Turns: </string>
+    <string name="title_activity_leaderboard">leaderboard</string>
 </resources>

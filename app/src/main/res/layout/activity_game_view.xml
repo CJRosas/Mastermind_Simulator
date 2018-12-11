@@ -109,13 +109,13 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="166dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent">
+    android:layout_width="166dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/linearLayout"
+    app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/turnCounter"
@@ -135,6 +135,7 @@
             android:id="@+id/response1"
             android:layout_width="match_parent"
             android:layout_height="47dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -142,6 +143,7 @@
             android:id="@+id/response2"
             android:layout_width="match_parent"
             android:layout_height="46dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -150,6 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:gravity="center"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -157,12 +160,14 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
             android:id="@+id/response5"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -171,6 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -178,12 +184,14 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
             android:id="@+id/response8"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -191,6 +199,7 @@
             android:id="@+id/response9"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -198,6 +207,7 @@
             android:id="@+id/response10"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </LinearLayout>
