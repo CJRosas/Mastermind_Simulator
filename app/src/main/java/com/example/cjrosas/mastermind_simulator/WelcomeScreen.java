@@ -38,7 +38,7 @@ public class WelcomeScreen extends AppCompatActivity {
                 String rules1 = getString(R.string.rules1);
                 String rules2 = getString(R.string.rules2);
                 TextView welcomeMessage = findViewById(R.id.welcomeMessage);
-                welcomeMessage.setText(rules1 + " " + name + ", " + rules2);
+                welcomeMessage.setText(rules1 + " >" + name + ", " + rules2);
                 goOn.setVisibility(View.VISIBLE);
             }
         });

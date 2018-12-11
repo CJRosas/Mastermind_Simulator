@@ -2,29 +2,28 @@
     <string name="app_name">Mastermind Simulator</string>
     <string name="nameInputText">Enter Your Name Here</string>
     <string name="enterButton">Submit</string>
-    <string name="welcomeMessage">Welcome to Virtual Mastermind!</string>
+    <string name="welcomeMessage">>Welcome to Virtual Mastermind!</string>
     <string name="rules1">
-        Welcome to Mastermind Mobile! This is based on a board game created by Mordecai Meirowitz. \n\n
-        There are 2 players, Codemaker and Codebreaker.
+        >Welcome to Mastermind Mobile! This is based on a board game created by Mordecai Meirowitz. \n\n
+        >There are 2 players, Codemaker and Codebreaker.
         The Codemaker creates a secret 4 color code for the Codebreaker to crack. \n\n
-        There are 6 colors to choose: Red, Blue, Green, Orange, White, and Yellow.
+        >There are 6 colors to choose: Red, Blue, Green, Orange, White, and Yellow.
         An example color code could be: Yellow, Red, Blue, Blue. \n\n
     </string>
     <string name="rules2">
-        you are playing as the Codebreaker.
-
-        It is your goal to guess the opponent\'s secret code in the least amount of guesses.
-        After each guess, the Codemaker will provide helpful feedback in the form of black and white pegs.
-        Black pegs indicate that a peg is the correct color and in the correct place in the sequence.
+        you are playing as the Codebreaker. \n\n
+        >It is your goal to guess the opponent\'s secret code in the least amount of guesses. \n\n
+        >After each guess, the Codemaker will provide helpful feedback in the form of black and white pegs. \n\n
+        >Black pegs indicate that a peg is the correct color and in the correct place in the sequence.
         White pegs indicate that a correct color is in the wrong place.
-        No pegs means the color is not in the sequence.
-        For this game, you will enter 4 letters that correspond to the colors!
-        G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.
-        Good luck and have fun!
+        No pegs means the color is not in the sequence. \n\n
+        >For this game, you will enter 4 letters that correspond to the colors!
+        G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.\n\n
+        >Good luck and have fun!
     </string>
     <string name="Continue">Continue</string>
     <string name="colorReminder">G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.</string>
-    <string name="guessField">Enter 4 Letter Code</string>
+    <string name="guessField">>Enter 4 Letter Code</string>
     <string name="counter">Turns: </string>
     <string name="end_game">YOU LOST</string>
     <string name="Reset">Reset?</string>

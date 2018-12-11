@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".GameView">
 
     <LinearLayout
@@ -11,6 +12,7 @@
         android:layout_width="217dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +26,7 @@
             android:text="@string/colorReminder"
             android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
             android:textSize="18sp"
+            android:textColor="#76ff03"
             android:textStyle="bold" />
 
         <EditText
@@ -31,6 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -39,6 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -47,6 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -55,6 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -63,6 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -71,6 +84,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -79,6 +94,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -87,6 +104,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -95,6 +114,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -103,6 +124,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#76ff03"
+            android:textColorHint="#76ff03"
             android:hint="@string/guessField"
             android:inputType="textNoSuggestions" />
 
@@ -112,6 +135,7 @@
         android:layout_width="166dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
@@ -122,6 +146,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
+            android:textColor="#76ff03"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textStyle="bold" />
 
@@ -136,6 +161,8 @@
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -143,6 +170,8 @@
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -150,6 +179,8 @@
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -157,6 +188,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -164,6 +197,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -171,6 +206,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -178,6 +215,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -185,6 +224,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -192,6 +233,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -199,6 +242,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:gravity="center"
+            android:textColor="#76ff03"
+            android:textSize="20sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
