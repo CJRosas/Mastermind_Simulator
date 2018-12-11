@@ -4,12 +4,11 @@
     <string name="enterButton">Submit</string>
     <string name="welcomeMessage">Welcome to Virtual Mastermind!</string>
     <string name="rules1">
-        Welcome to Mastermind Mobile! This is based on a board game created by Mordecai Meirowitz.
-        There are 2 players, the Codemaker and the Codebreaker.
-        The Codemaker creates a secret 4 peg color code for the Codebreaker to guess.
+        Welcome to Mastermind Mobile! This is based on a board game created by Mordecai Meirowitz. \n\n
+        There are 2 players, Codemaker and Codebreaker.
+        The Codemaker creates a secret 4 color code for the Codebreaker to crack. \n\n
         There are 6 colors to choose: Red, Blue, Green, Orange, White, and Yellow.
-        An example color code could be: Yellow, Red, Blue, Blue.
-
+        An example color code could be: Yellow, Red, Blue, Blue. \n\n
     </string>
     <string name="rules2">
         you are playing as the Codebreaker.
@@ -27,4 +26,7 @@
     <string name="colorReminder">G is for Green, R is for Red, U is for Blue, Y is for Yellow, W is for White, and O is for Orange.</string>
     <string name="guessField">Enter 4 Letter Code</string>
     <string name="counter">Turns: </string>
+    <string name="end_game">YOU LOST</string>
+    <string name="Reset">Reset?</string>
+    <string name="Exit">Exit?</string>
 </resources>

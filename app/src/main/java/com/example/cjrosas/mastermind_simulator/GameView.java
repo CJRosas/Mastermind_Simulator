@@ -1,17 +1,48 @@
 package com.example.cjrosas.mastermind_simulator;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static com.example.cjrosas.mastermind_simulator.CodeBreaker.checkCorrect;
-
 
 public class GameView extends AppCompatActivity {
-
+//    public static void restartActivity(Activity act){
+//        Intent intent=new Intent();
+//        intent.setClass(act, act.getClass());
+//        ((Activity)act).startActivity(intent);
+//        ((Activity)act).finish();
+//    }
+//    public static class FireMissilesDialogFragment extends DialogFragment {
+//        @Override
+//        public Dialog onCreateDialog(Bundle savedInstanceState) {
+//            // Use the Builder class for convenient dialog construction
+//            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//            builder.setMessage(R.string.end_game)
+//                    .setPositiveButton(R.string.Reset, new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int id) {
+//                            System.exit(0);
+//                            //Figure out how to do that
+//                        }
+//                    })
+//                    .setNegativeButton(R.string.Exit, new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int id) {
+//                        }
+//                    });
+//            // Create the AlertDialog object and return it
+//            return builder.create();
+//        }
+//    }
     int i = 0;
 
     String guess;
@@ -182,6 +213,8 @@ public class GameView extends AppCompatActivity {
                     CharSequence text = CodeBreaker.getGuess(guess);
                     String turns = getString(R.string.counter);
                     response10.setText(text);
+//                    DialogFragment newFragment = new FireMissilesDialogFragment();
+//                    newFragment.show(getSupportFragmentManager(), "missiles");;
                     turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
                 }
             }
