@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameView">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Here will be our text." />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="217dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/playerone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playertwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playerthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playerfour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playerfive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playersix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playerseven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playereight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playernine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+        <TextView
+            android:id="@+id/playerten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Here will be our text." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="217dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/playerone_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playertwo_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playerthree_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playerfour_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playerfive_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playersix_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playerseven_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playereight_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playernine_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/playerten_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Here will be our text."
+            android:textSize="20sp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

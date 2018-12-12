@@ -28,4 +28,6 @@
     <string name="end_game">YOU LOST</string>
     <string name="Reset">Reset?</string>
     <string name="Exit">Exit?</string>
+    <string name="title_activity_leaderboard">leaderboard</string>
+    <string name="leaderboard">Leaderboard</string>
 </resources>

@@ -131,4 +131,6 @@ public class CodeBreaker {
     public static String[] getSecretCode() {
         return secretCode;
     }
+
+    public static String getName() { return player; }
 }

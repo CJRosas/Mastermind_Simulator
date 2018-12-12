@@ -109,6 +109,10 @@ public class GameView extends AppCompatActivity {
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
+                    }
                     return;
                 }
                 if (i == 1) {
@@ -120,6 +124,10 @@ public class GameView extends AppCompatActivity {
                     turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
                     if (!((String) text).startsWith("R")) {
                         i++;
+                    }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
                     }
                     return;
                 }
@@ -133,6 +141,10 @@ public class GameView extends AppCompatActivity {
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
+                    }
                     return;
                 }
                 if (i == 3) {
@@ -144,6 +156,10 @@ public class GameView extends AppCompatActivity {
                     turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
                     if (!((String) text).startsWith("R")) {
                         i++;
+                    }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
                     }
                     return;
                 }
@@ -157,6 +173,10 @@ public class GameView extends AppCompatActivity {
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
+                    }
                     return;
                 }
                 if (i == 5) {
@@ -168,6 +188,10 @@ public class GameView extends AppCompatActivity {
                     turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
                     if (!((String) text).startsWith("R")) {
                         i++;
+                    }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
                     }
                     return;
                 }
@@ -181,6 +205,10 @@ public class GameView extends AppCompatActivity {
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
+                    }
                     return;
                 }
                 if (i == 7) {
@@ -192,6 +220,10 @@ public class GameView extends AppCompatActivity {
                     turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
                     if (!((String) text).startsWith("R")) {
                         i++;
+                    }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
                     }
                     return;
                 }
@@ -205,6 +237,10 @@ public class GameView extends AppCompatActivity {
                     if (!((String) text).startsWith("R")) {
                         i++;
                     }
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
+                    }
                     return;
                 }
                 if (i == 9) {
@@ -216,6 +252,15 @@ public class GameView extends AppCompatActivity {
 //                    DialogFragment newFragment = new FireMissilesDialogFragment();
 //                    newFragment.show(getSupportFragmentManager(), "missiles");;
                     turnCounter.setText(turns + Integer.toString(CodeBreaker.getNumOfTurns()));
+                    if (((String) text).contains("won") || ((String) text).contains("lost")) {
+                        submitButton.setText(R.string.leaderboard);
+                        startActivity(new Intent(GameView.this, leaderboard.class));
+                    }
+                    i++;
+                }
+                if (i == 10) {
+                    submitButton.setText(R.string.leaderboard);
+                    startActivity(new Intent(GameView.this, leaderboard.class));
                 }
             }
         });
