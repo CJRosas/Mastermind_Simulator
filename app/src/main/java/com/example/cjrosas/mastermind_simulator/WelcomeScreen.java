@@ -24,10 +24,10 @@ public class WelcomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
-        nameInput = (EditText) findViewById(R.id.nameInput);
-        CodeBreaker player = new CodeBreaker(name);
-        btn = (Button) findViewById(R.id.submitButton);
-        goOn = (Button) findViewById(R.id.continueButton);
+        nameInput = findViewById(R.id.nameInput);
+        final CodeBreaker player = new CodeBreaker(name);
+        btn = findViewById(R.id.submitButton);
+        goOn = findViewById(R.id.continueButton);
         goOn.setVisibility(View.GONE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
@@ -38,14 +38,16 @@ public class WelcomeScreen extends AppCompatActivity {
                 String rules1 = getString(R.string.rules1);
                 String rules2 = getString(R.string.rules2);
                 TextView welcomeMessage = findViewById(R.id.welcomeMessage);
-                welcomeMessage.setText(rules1 + " >" + name + ", " + rules2);
+                welcomeMessage.setText(rules1 .concat(" >".concat(name).concat(", ").concat(rules2)));
                 goOn.setVisibility(View.VISIBLE);
             }
         });
         goOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WelcomeScreen.this, GameView.class));
+                Intent mIntent = new Intent(WelcomeScreen.this, GameView.class);
+                mIntent.putExtra("player", player);
+                startActivity(mIntent);
             }
         });
     }

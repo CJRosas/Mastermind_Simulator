@@ -1,22 +1,21 @@
 package com.example.cjrosas.mastermind_simulator;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.*;
 
-public class CodeBreaker {
+public class CodeBreaker implements Serializable {
     private static List<String> allCombinations = new ArrayList<String>();
     private static final String[] letters = new String[6];
     private static int numOfTurns = 10;
-    private static String player;
+    private String player;
     private static String secretC;
     private static String[] secretCode = new String[4];
-    private static CodeBreaker highScore;
 
     public CodeBreaker(String p) {
-        if (p == null) {
-            player = "Player";
-        } else {
-            player = p;
-        }
+        player = p;
         Random obj = new Random();
         getAllCombinations();
         secretC = allCombinations.get(obj.nextInt(allCombinations.size()));
@@ -29,14 +28,13 @@ public class CodeBreaker {
         secretCode[3] = secretC.substring(3, 4);
     }
 
-    public static String getGuess(String g) {
+    public String getGuess(String g) {
         if (numOfTurns == 0) {
             return "You lost!";
         } else {
-            String guess = g;
-            if (allCombinations.contains(guess)) {
+            if (allCombinations.contains(g)) {
                 numOfTurns--;
-                return isCorrect(guess);
+                return isCorrect(g);
             } else {
                 return "RETRY";
             }
@@ -61,7 +59,7 @@ public class CodeBreaker {
         }
     }
 
-    public static String isCorrect(String guess) {
+    public String isCorrect(String guess) {
         if (guess.equals(secretC)) {
             return winGame();
         } else {
@@ -69,7 +67,7 @@ public class CodeBreaker {
         }
     }
 
-    public static String checkCorrect(String g) {
+    public String checkCorrect(String g) {
         String pegs = "";
         String[] guess = new String[4];
         for (int i = 0; i < g.length(); i++) {
@@ -105,7 +103,7 @@ public class CodeBreaker {
 
     }
 
-    public static String winGame() {
+    public String winGame() {
 //        if (highScore == null) {
 //            highScore = this;
 //        }
@@ -113,24 +111,16 @@ public class CodeBreaker {
 //        if (turns > numOfTurns) {
 //            highScore = this;
 //        }
-        return player + " won with " + numOfTurns + " turns left!";
+        return getName() + " won with " + getNumOfTurns() + " turns left!";
     }
 
-    public static String getHighPlayersScore() throws NullPointerException {
-        try {
-            return Integer.toString(highScore.getNumOfTurns());
-        } catch (Exception e) {
-            return "No one has won yet ;)";
-        }
-    }
-
-    public static int getNumOfTurns() {
+    public int getNumOfTurns() {
         return numOfTurns;
     }
 
-    public static String[] getSecretCode() {
-        return secretCode;
+    public String getSecretC() {
+        return secretC;
     }
 
-    public static String getName() { return player; }
+    public String getName() { return player; }
 }
