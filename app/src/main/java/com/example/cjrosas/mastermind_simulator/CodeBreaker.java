@@ -1,9 +1,7 @@
 package com.example.cjrosas.mastermind_simulator;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class CodeBreaker implements Serializable {
@@ -13,6 +11,7 @@ public class CodeBreaker implements Serializable {
     private String player;
     private static String secretC;
     private static String[] secretCode = new String[4];
+    private ArrayList<Integer> hashCodes;
 
     public CodeBreaker(String p) {
         player = p;
@@ -69,6 +68,7 @@ public class CodeBreaker implements Serializable {
 
     public String checkCorrect(String g) {
         String pegs = "";
+        hashCodes = new ArrayList<>();
         String[] guess = new String[4];
         for (int i = 0; i < g.length(); i++) {
             guess[i] = g.substring(i, i + 1);
@@ -77,13 +77,13 @@ public class CodeBreaker implements Serializable {
         for (int i = 0; i < guess.length; i++) {
             if (guess[i].equals(secretCode[i])) {
                 pegs = pegs.concat("B");
-                seen.add(guess[i]);
+                hashCodes.add(guess[i].hashCode());
             }
         }
         for (int i = 0; i < guess.length; i++) {
-            if (secretC.contains(guess[i]) && !(seen.contains(guess[i]))) {
+            if (secretC.contains(guess[i]) && !(hashCodes.contains(guess[i].hashCode()))) {
                 pegs = pegs.concat("W");
-                seen.add(guess[i]);
+                hashCodes.add(guess[i].hashCode());
             } else {
                 pegs = pegs.concat(" ");
             }

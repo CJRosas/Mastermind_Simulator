@@ -109,8 +109,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 1) {
                     guess = guess2.getText().toString();
@@ -127,8 +127,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 2) {
                     guess = guess3.getText().toString();
@@ -146,6 +146,7 @@ public class GameView extends AppCompatActivity {
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
                     }
+                    return;
                 }
                 if (i == 3) {
                     guess = guess4.getText().toString();
@@ -179,8 +180,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 5) {
                     guess = guess6.getText().toString();
@@ -197,8 +198,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 6) {
                     guess = guess7.getText().toString();
@@ -215,8 +216,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 7) {
                     guess = guess8.getText().toString();
@@ -233,8 +234,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 8) {
                     guess = guess9.getText().toString();
@@ -251,8 +252,8 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
+                    return;
                 }
                 if (i == 9) {
                     guess = guess10.getText().toString();
@@ -268,9 +269,9 @@ public class GameView extends AppCompatActivity {
                         Intent mIntent = new Intent(GameView.this, leaderboard.class);
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
-                        return;
                     }
                     i++;
+                    return;
                 }
                 if (i == 10) {
                     submitButton.setText(R.string.leaderboard);
