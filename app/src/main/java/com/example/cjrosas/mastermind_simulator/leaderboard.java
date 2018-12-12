@@ -28,12 +28,21 @@ public class leaderboard extends AppCompatActivity {
             player_five_score, player_six_score, player_seven_score, player_eight_score,
             player_nine_score, player_ten_score;
 
+    public TextView textViewTwo;
+
+    public TextView textViewThree;
+
     public String nameone, nametwo, namethree, namefour, namefive, namesix, nameseven, nameeight,
             namenine, nameten;
     public int scoreone, scoretwo, scorethree, scorefour, scorefive, scoresix, scoreseven, scoreeight,
             scorenine, scoreten;
     public static final String SHARED_PREFS = "sharedPrefs";
     public String text = "Leaderboard";
+    public String youLost = "You didn't make it on the leaderboard!";
+    public String plusLost = "Good luck next time!";
+    public String youWon = "You made it on the leaderboard!";
+    public String plusWon = "Congrats!";
+    public TextView winorlose;
 
 
     @Override
@@ -53,6 +62,7 @@ public class leaderboard extends AppCompatActivity {
         });
         textView = findViewById(R.id.textview);
         textView.setText(text);
+        winorlose = findViewById(R.id.winorlose);
         player_one = findViewById(R.id.playerone);
         player_two = findViewById(R.id.playertwo);
         player_three = findViewById(R.id.playerthree);
@@ -76,6 +86,8 @@ public class leaderboard extends AppCompatActivity {
 
         loadData();
         updateViews();
+
+
     }
     public void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -103,7 +115,8 @@ public class leaderboard extends AppCompatActivity {
         nameten = sharedPreferences.getString("ten", "No one has won yet");
         scoreten = sharedPreferences.getInt("ten_score", 0);
         value = sharedPreferences.getInt("one_score", 0);
-        if (value < numOfTurns || value == 0) {
+        winorlose.setText(youLost);
+        if (value < numOfTurns) {
             editor.putString("one", CodeBreaker.getName());
             editor.putInt("one_score", CodeBreaker.getNumOfTurns());
             editor.putString("two", nameone);
@@ -124,11 +137,10 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
-
-
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("two_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("two", CodeBreaker.getName());
             editor.putInt("two_score", CodeBreaker.getNumOfTurns());
             editor.putString("three", nametwo);
@@ -147,9 +159,10 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("three_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("three", CodeBreaker.getName());
             editor.putInt("three_score", CodeBreaker.getNumOfTurns());
             editor.putString("four", namethree);
@@ -166,9 +179,10 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("four_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("four", CodeBreaker.getName());
             editor.putInt("four_score", CodeBreaker.getNumOfTurns());
             editor.putString("five", namefour);
@@ -183,9 +197,10 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("five_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("five", CodeBreaker.getName());
             editor.putInt("five_score", CodeBreaker.getNumOfTurns());
             editor.putString("six", namefive);
@@ -198,9 +213,10 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("six_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("six", CodeBreaker.getName());
             editor.putInt("six_score", CodeBreaker.getNumOfTurns());
             editor.putString("seven", namesix);
@@ -211,9 +227,10 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("seven_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("seven", CodeBreaker.getName());
             editor.putInt("seven_score", CodeBreaker.getNumOfTurns());
             editor.putString("eight", nameseven);
@@ -222,27 +239,31 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("eight_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("eight", CodeBreaker.getName());
             editor.putInt("eight_score", CodeBreaker.getNumOfTurns());
             editor.putString("nine", nameeight);
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("nine_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("nine", CodeBreaker.getName());
             editor.putInt("nine_score", CodeBreaker.getNumOfTurns());
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            winorlose.setText(youWon);
         }
         value = sharedPreferences.getInt("ten_score", 0);
-        if (value < numOfTurns || value == 0) {
+        if (value < numOfTurns) {
             editor.putString("ten", CodeBreaker.getName());
             editor.putInt("ten_score", CodeBreaker.getNumOfTurns());
+            winorlose.setText(youWon);
         }
         editor.apply();
         Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show();
