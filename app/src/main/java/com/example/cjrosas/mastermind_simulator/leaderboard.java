@@ -28,12 +28,20 @@ public class leaderboard extends AppCompatActivity {
             player_five_score, player_six_score, player_seven_score, player_eight_score,
             player_nine_score, player_ten_score;
 
+    public TextView textViewTwo;
+
+    public TextView textViewThree;
+
     public String nameone, nametwo, namethree, namefour, namefive, namesix, nameseven, nameeight,
             namenine, nameten;
     public int scoreone, scoretwo, scorethree, scorefour, scorefive, scoresix, scoreseven, scoreeight,
             scorenine, scoreten;
     public static final String SHARED_PREFS = "sharedPrefs";
     public String text = "Leaderboard";
+    public String youLost = "You didn't make it on the leaderboard!";
+    public String plusLost = "Good luck next time!";
+    public String youWon = "You made it on the leaderboard!";
+    public String plusWon = "Congrats!";
 
 
     @Override
@@ -53,6 +61,8 @@ public class leaderboard extends AppCompatActivity {
         });
         textView = findViewById(R.id.textview);
         textView.setText(text);
+        textViewTwo = findViewById(R.id.textviewtwo);
+        textViewThree = findViewById(R.id.textviewthree);
         player_one = findViewById(R.id.playerone);
         player_two = findViewById(R.id.playertwo);
         player_three = findViewById(R.id.playerthree);
@@ -76,6 +86,8 @@ public class leaderboard extends AppCompatActivity {
 
         loadData();
         updateViews();
+
+
     }
     public void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -124,8 +136,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
-
-
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("two_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -147,6 +159,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("three_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -166,6 +180,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("four_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -183,6 +199,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("five_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -198,6 +216,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("six_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -211,6 +231,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("seven_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -222,6 +244,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("eight_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -231,6 +255,8 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", scoreeight);
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("nine_score", 0);
         if (value < numOfTurns || value == 0) {
@@ -238,11 +264,15 @@ public class leaderboard extends AppCompatActivity {
             editor.putInt("nine_score", CodeBreaker.getNumOfTurns());
             editor.putString("ten", namenine);
             editor.putInt("ten_score", scorenine);
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         value = sharedPreferences.getInt("ten_score", 0);
         if (value < numOfTurns || value == 0) {
             editor.putString("ten", CodeBreaker.getName());
             editor.putInt("ten_score", CodeBreaker.getNumOfTurns());
+            textViewTwo.setText(youWon);
+            textViewThree.setText(plusWon);
         }
         editor.apply();
         Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show();
