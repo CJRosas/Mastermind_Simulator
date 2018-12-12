@@ -29,7 +29,7 @@ public class CodeBreaker implements Serializable {
 
     public String getGuess(String g) {
         if (numOfTurns == 0) {
-            return "You lost!";
+            return "The code was: ".concat(this.getSecretC());
         } else {
             if (allCombinations.contains(g)) {
                 numOfTurns--;
@@ -73,7 +73,6 @@ public class CodeBreaker implements Serializable {
         for (int i = 0; i < g.length(); i++) {
             guess[i] = g.substring(i, i + 1);
         }
-        List<String> seen = new ArrayList<>();
         for (int i = 0; i < guess.length; i++) {
             if (guess[i].equals(secretCode[i])) {
                 pegs = pegs.concat("B");

@@ -33,7 +33,7 @@ public class leaderboard extends AppCompatActivity {
             scorenine, scoreten;
     public static final String SHARED_PREFS = "sharedPrefs";
     public String text = "Leaderboard";
-    public String youLost = "You didn't make it on the leaderboard.";
+    public String youLost = "The correct code was: ";
     public String youWon = "You made it on the leaderboard!";
     public TextView winorlose;
 
@@ -108,8 +108,8 @@ public class leaderboard extends AppCompatActivity {
         nameten = sharedPreferences.getString("ten", "No one has won yet");
         scoreten = sharedPreferences.getInt("ten_score", 0);
         value = sharedPreferences.getInt("one_score", 0);
-        winorlose.setText(youLost);
-        if (value <= numOfTurns) {
+        winorlose.setText(youLost.concat(player.getSecretC().concat(".")));
+        if (value < numOfTurns) {
             editor.putString("one", player.getName());
             editor.putInt("one_score", player.getNumOfTurns());
             editor.putString("two", nameone);
@@ -136,7 +136,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("two_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("two", player.getName());
             editor.putInt("two_score", player.getNumOfTurns());
             editor.putString("three", nametwo);
@@ -161,7 +161,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("three_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("three", player.getName());
             editor.putInt("three_score", player.getNumOfTurns());
             editor.putString("four", namethree);
@@ -184,7 +184,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("four_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("four", player.getName());
             editor.putInt("four_score", player.getNumOfTurns());
             editor.putString("five", namefour);
@@ -205,7 +205,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("five_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("five", player.getName());
             editor.putInt("five_score", player.getNumOfTurns());
             editor.putString("six", namefive);
@@ -224,7 +224,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("six_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("six", player.getName());
             editor.putInt("six_score", player.getNumOfTurns());
             editor.putString("seven", namesix);
@@ -241,7 +241,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("seven_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("seven", player.getName());
             editor.putInt("seven_score", player.getNumOfTurns());
             editor.putString("eight", nameseven);
@@ -256,7 +256,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("eight_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("eight", player.getName());
             editor.putInt("eight_score", player.getNumOfTurns());
             editor.putString("nine", nameeight);
@@ -269,7 +269,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("nine_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("nine", player.getName());
             editor.putInt("nine_score", player.getNumOfTurns());
             editor.putString("ten", namenine);
@@ -280,7 +280,7 @@ public class leaderboard extends AppCompatActivity {
             return;
         }
         value = sharedPreferences.getInt("ten_score", 0);
-        if (value <= numOfTurns) {
+        if (value < numOfTurns) {
             editor.putString("ten", player.getName());
             editor.putInt("ten_score", player.getNumOfTurns());
             winorlose.setText(youWon);
