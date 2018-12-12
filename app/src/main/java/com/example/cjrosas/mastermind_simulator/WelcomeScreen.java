@@ -25,7 +25,6 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
         nameInput = findViewById(R.id.nameInput);
-        final CodeBreaker player = new CodeBreaker(name);
         btn = findViewById(R.id.submitButton);
         goOn = findViewById(R.id.continueButton);
         goOn.setVisibility(View.GONE);
@@ -35,16 +34,18 @@ public class WelcomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 name = nameInput.getText().toString();
+                final CodeBreaker player = new CodeBreaker(name);
                 String rules1 = getString(R.string.rules1);
                 String rules2 = getString(R.string.rules2);
                 TextView welcomeMessage = findViewById(R.id.welcomeMessage);
-                welcomeMessage.setText(rules1 .concat(" >".concat(name).concat(", ").concat(rules2)));
+                welcomeMessage.setText(rules1 .concat(" >".concat(player.getName()).concat(", ").concat(rules2)));
                 goOn.setVisibility(View.VISIBLE);
             }
         });
         goOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final CodeBreaker player = new CodeBreaker(name);
                 Intent mIntent = new Intent(WelcomeScreen.this, GameView.class);
                 mIntent.putExtra("player", player);
                 startActivity(mIntent);

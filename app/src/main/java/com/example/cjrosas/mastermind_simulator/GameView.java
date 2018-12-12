@@ -67,11 +67,10 @@ public class GameView extends AppCompatActivity {
     TextView response9;
     TextView response10;
     TextView turnCounter;
-    final CodeBreaker player = (CodeBreaker) getIntent().getSerializableExtra("player");
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final CodeBreaker player = (CodeBreaker) getIntent().getSerializableExtra("player");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_view);
         String text = "Turns: ";
@@ -94,6 +93,7 @@ public class GameView extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final CodeBreaker player = (CodeBreaker) getIntent().getSerializableExtra("player");
                 if (i == 0) {
                     guess = guess1.getText().toString();
                     TextView response1 = findViewById(R.id.response1);

@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class leaderboard extends AppCompatActivity {
-    final private CodeBreaker player = (CodeBreaker) getIntent().getSerializableExtra("player");
     public TextView textView;
     private String playerone, playertwo, playerthree, playerfour, playerfive, playersix,
             playerseven, playereight, playernine, playerten;
@@ -86,6 +85,7 @@ public class leaderboard extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         int value;
+        final CodeBreaker player = (CodeBreaker) getIntent().getSerializableExtra("player");
         int numOfTurns = player.getNumOfTurns();
         nameone = sharedPreferences.getString("one", "No one has won yet");
         scoreone = sharedPreferences.getInt("one_score", 0);
