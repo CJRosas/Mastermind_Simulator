@@ -164,6 +164,7 @@ public class GameView extends AppCompatActivity {
                         mIntent.putExtra("player", player);
                         startActivity(mIntent);
                     }
+                    return;
                 }
                 if (i == 4) {
                     guess = guess5.getText().toString();
